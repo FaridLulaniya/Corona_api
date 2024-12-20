@@ -15,7 +15,8 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #c9d6ff, #e2e2e2);
+            background-image: url(./pexels-markusspiske-3970331.jpg);
+            background-size: cover;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -32,7 +33,7 @@
 
         header h1 {
             font-size: 3rem;
-            color: #2c3e50;
+            color: #ffffff9c;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -40,11 +41,12 @@
         .tracker {
             width: 90%;
             max-width: 800px;
-            background: #fdfdfd;
+            background: #fdfdfd00;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px 20px rgb(0 0 0 / 59%);
             backdrop-filter: blur(10px);
+            border: 1px solid white;
         }
 
         .search {
@@ -59,8 +61,9 @@
             border: 2px solid #a29bfe;
             border-radius: 8px;
             outline: none;
+            color: white;
             font-size: 1rem;
-            background: #ecf0f1;
+            background: #ecf0f10f;
             transition: border-color 0.3s;
         }
 
@@ -68,19 +71,23 @@
             border-color: #6c5ce7;
         }
 
+        ::placeholder{
+            color: white;
+        }
+
         .search button {
             padding: 0.8rem 1.5rem;
             border: none;
-            background: #6c5ce7;
+            background: #cf1717ba;
             color: #ffffff;
             font-size: 1rem;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s;
         }
 
         .search button:hover {
-            background: #5a4ae7;
+            background: #f7f7f88a;
+            color: black;
         }
 
         .results {
@@ -90,12 +97,13 @@
         }
 
         .card {
-            background: #f7f9fc;
+            background: #f7f9fc0a;
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 15px rgb(0 0 0 / 90%);
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid white;
         }
 
         .card:hover {
@@ -106,29 +114,14 @@
         .card h3 {
             font-size: 1.8rem;
             margin-bottom: 0.5rem;
-            color: #34495e;
+            color: #c2c9cf;
+            text-decoration: underline;
         }
 
         .card p {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
-            color: #7f8c8d;
-        }
-
-        footer {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #95a5a6;
-        }
-
-        footer a {
-            color: #6c5ce7;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            color: #fffffff0;
         }
     </style>
 </head>
@@ -145,10 +138,6 @@
         </div>
         <div class="results" id="results"></div>
     </div>
-
-    <footer>
-        <p>Powered by <a href="https://disease.sh/" target="_blank">Disease.sh API</a></p>
-    </footer>
 
     <script>
         const apiBase = 'https://disease.sh/v3/covid-19/countries';
