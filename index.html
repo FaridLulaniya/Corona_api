@@ -17,6 +17,7 @@
             font-family: 'Arial', sans-serif;
             background-image: url(./pexels-markusspiske-3970331.jpg);
             background-size: cover;
+            background-position: center;
             color: #333;
             display: flex;
             flex-direction: column;
@@ -53,6 +54,7 @@
             display: flex;
             margin-bottom: 2rem;
             gap: 10px;
+            flex-wrap: wrap;
         }
 
         .search input {
@@ -71,7 +73,7 @@
             border-color: #6c5ce7;
         }
 
-        ::placeholder{
+        ::placeholder {
             color: white;
         }
 
@@ -123,12 +125,59 @@
             margin-bottom: 0.5rem;
             color: #fffffff0;
         }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+                color: #e5e5e5;
+            }
+
+            .tracker {
+            width: 100%;
+            max-width: 800px;
+            background: #fdfdfd00;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px 20px rgb(0 0 0 / 59%);
+            backdrop-filter: blur(10px);
+            border: 1px solid white;
+        }
+
+            .tracker {
+                padding: 1rem;
+            }
+
+            .search input {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+
+            .search button {
+                font-size: 0.9rem;
+                padding: 0.6rem 1rem;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+
+            .card h3 {
+                font-size: 1.5rem;
+            }
+
+            .card p {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Global COVID Tracker</h1>
+        <h1>Global COVID-19 Tracker</h1>
     </header>
 
     <div class="tracker">
